@@ -5,10 +5,10 @@
 app.get('/monstros/:monstro_id', (req, res) => {
 
     // Descubra como pegar o ID passado pela URL através do atributo req.params 
-    let id = req.params._____;
+    let id = req.params.monstro_id;
     // Pesquise sobre o método find em javascript e filtre o monstro por ID.
     // Vale 15 pts
-    let monstro = ________________ ;
+    let monstro = monstros.find(m => m.id == Number(id)) ;
 
     if (monstro) {
         res.json(monstro)
